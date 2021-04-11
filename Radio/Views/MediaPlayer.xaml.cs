@@ -9,5 +9,10 @@ namespace Radio.Views
         {
             InitializeComponent();
         }
+
+        public void SelectTrack(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }

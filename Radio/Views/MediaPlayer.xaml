@@ -18,10 +18,8 @@
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Row="1" Grid.ColumnSpan="3" Background="WhiteSmoke" Orientation="Vertical">
             <StackPanel Orientation="Horizontal">
-                <Button Width="120" Height="20" Margin="10,1, 10, 0" Content="Выбрать из списка" />
-                <Button Width="120" Height="20" Margin="10,0, 10, 1" Content="Редактировать трек" ></Button>
-                <Button Width="120" Height="20" Margin="10,0, 10, 1" Content="Удалить из списка" ></Button>
-                <Button Width="120" Height="20" Margin="10,0, 410, 1" Content="Выход" ></Button>
+                <Button Width="120" Height="20" Margin="10,1, 10, 0" Content="Выбрать из списка" 
+                        Click="SelectTrack"/>
             </StackPanel>
             </StackPanel>
         <ScrollViewer Grid.Column="2">

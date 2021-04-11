@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\valer\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\valer\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_Radio.1862017006.00" t="ExcludeRecursive" />
-    <e p="D:\Radio" t="IncludeFlat">
+    <e p="C:\Users\valer\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_Radio.787863908.00" t="ExcludeRecursive" />
+    <e p="D:\Git\Radio" t="IncludeFlat">
       <e p="packages" t="ExcludeRecursive" />
       <e p="Radio" t="IncludeRecursive">
         <e p="App.config" t="Include" />

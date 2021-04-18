@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.ObjectModel;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Navigation;
 using Radio.Models;
 
 namespace Radio.Views

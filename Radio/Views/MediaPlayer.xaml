@@ -18,7 +18,7 @@
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Row="1" Grid.ColumnSpan="3" Background="WhiteSmoke" Orientation="Vertical">
             <StackPanel Orientation="Horizontal">
-                <Button Width="120" Height="20" Margin="10,1, 10, 0" Content="Выбрать из списка" 
+                <Button Width="120" Height="20" Margin="10,1, 10, 0" Content="Выбрать файл" 
                         Click="SelectTrack"/>
             </StackPanel>
             </StackPanel>
@@ -36,7 +36,7 @@
         </ScrollViewer>
         <StackPanel Grid.Column="1" Orientation="Horizontal" Background="WhiteSmoke">
           
-            <ListBox x:Name="m_listmp" ItemsSource="{Binding Path= m_mp3file}" Width="410" Background="WhiteSmoke" Foreground="White">
+            <!--<ListBox x:Name="m_listmp" ItemsSource="{Binding Path= m_mp3file}" Width="410" Background="WhiteSmoke" Foreground="White">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Vertical">
@@ -56,30 +56,27 @@
                         
                     </DataTemplate>
                 </ListBox.ItemTemplate>
-            </ListBox>
+            </ListBox>-->
         </StackPanel>
         <StackPanel Background="WhiteSmoke">
             <TextBlock x:Name="m_TextBlock" Foreground="White" FontSize="38" Height="40"></TextBlock>
-            <Slider x:Name="m_Slider" Margin="10, 10, 10,0" ToolTip="Слайдер" IsManipulationEnabled="True" IsEnabled="True" IsMoveToPointEnabled="True" AllowDrop="True"  />
-            <Slider x:Name="m_Volume" Margin="10, 5, 100, 0" ToolTip="Громкость" ></Slider>
+            <Slider x:Name="m_Slider" Margin="10, 10, 10,0" ToolTip="Слайдер" IsManipulationEnabled="True" 
+                    IsEnabled="True" IsMoveToPointEnabled="True" AllowDrop="True"  />
+            <Track />
+            <Slider x:Name="m_Volume" Margin="10, 5, 10, 0" ToolTip="Громкость" 
+                    ValueChanged="M_Volume_OnValueChanged" Width="150"></Slider>
             <StackPanel Height="60" Orientation="Horizontal">
                 <Button Height="20" Width="20" Margin="15,20,0,20" Background="LightGray" ToolTip="Предыдущая дорожка" >
-                    <Image Source="player_rev.png"></Image>
                 </Button>
-                <Button Height="20" Width="20" Background="LightGray" ToolTip="Воспроизводить" >
-                    <Image Source="play.png"></Image>
+                <Button Height="20" Width="20" Background="LightGray" ToolTip="Воспроизводить" Content="P" Click="PlayClick">
                 </Button>
-                <Button Height="20" Width="20" Background="LightGray" ToolTip="Приостановить" >
-                    <Image Source="player_pause.png"></Image>
+                <Button Height="20" Width="20" Background="LightGray" ToolTip="Приостановить" Content="S" Click="Suspend">
                 </Button>
-                <Button Height="20" Width="20" Background="LightGray" ToolTip="Остановить" >
-                    <Image Source="player_stop.png"></Image>
+                <Button Height="20" Width="20" Background="LightGray" ToolTip="Остановить" Click="PlayerStop">
                 </Button>
                 <Button Height="20" Width="20" Background="LightGray" ToolTip="Следующая дорожка" >
-                    <Image Source="player_fwd.png"></Image>
                 </Button>
                 <Button Height="20" Width="20" Margin="20" Background="LightGray" ToolTip="Открыть файл">
-                    <Image Source="player_eject.png"></Image>
                 </Button>
             </StackPanel>
         </StackPanel>

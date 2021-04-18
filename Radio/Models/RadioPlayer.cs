@@ -51,6 +51,22 @@ namespace Radio.Models
                 }
             }
         }
+        
+        public static void PlayFile(string fileName, int vol)
+        {
+            Stop();
+
+            if (InitBass(_hz))
+            {
+                Stream = Bass.BASS_StreamCreateFile(fileName, 0, 0, BASSFlag.BASS_DEFAULT);
+                if (Stream != 0)
+                {
+                    Volume = vol;
+                    Bass.BASS_ChannelSetAttribute(Stream, BASSAttribute.BASS_ATTRIB_VOL, Volume / 100F);
+                    Bass.BASS_ChannelPlay(Stream, false);
+                }
+            }
+        }
 
         /// <summary>
         /// Стоп
@@ -82,6 +98,11 @@ namespace Radio.Models
         {
             Volume = vol;
             Bass.BASS_ChannelSetAttribute(stream, BASSAttribute.BASS_ATTRIB_VOL, Volume / 100F);
+        }
+
+        public static void SuspendChannel()
+        {
+            Bass.BASS_ChannelPause(-1);
         }
     }
 }

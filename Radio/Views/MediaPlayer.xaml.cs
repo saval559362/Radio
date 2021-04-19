@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using System.Windows;
 using Radio.Models;
 
@@ -10,7 +11,8 @@ namespace Radio.Views
         public MediaPlayer()
         {
             InitializeComponent();
-            m_Volume.Value = 5;
+            m_Volume.Value = 0.5f;
+            
         }
 
         public void SelectTrack(object sender, RoutedEventArgs e)
@@ -37,11 +39,19 @@ namespace Radio.Views
         private void PlayClick(object sender, RoutedEventArgs e)
         {
             RadioPlayer.PlayFile(_path, Convert.ToInt32(m_Volume.Value * 10));
+            PosOfMusic.Text = TimeSpan.FromSeconds(RadioPlayer.GetPosOfStream(RadioPlayer.Stream)).ToString();
+            TimeOfMusic.Text = TimeSpan.FromSeconds(RadioPlayer.GetTimeOfStream(RadioPlayer.Stream)).ToString();
+
+            m_Slider.Maximum = RadioPlayer.GetTimeOfStream(RadioPlayer.Stream);
+            m_Slider.Value = RadioPlayer.GetPosOfStream(RadioPlayer.Stream);
+
+            m_listBox.Items.Add(_path);
         }
 
         private void Suspend(object sender, RoutedEventArgs e)
         {
             RadioPlayer.SuspendChannel();
         }
+        
     }
 }

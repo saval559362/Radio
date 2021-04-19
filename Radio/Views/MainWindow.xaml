@@ -6,76 +6,67 @@
         xmlns:local="clr-namespace:Radio"
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="800">
-	
-        <StackPanel>
-	        <DockPanel>
-		        <Menu DockPanel.Dock="Top" Background="White" Padding="5">
-			        <MenuItem Header="Файл">
-				        <MenuItem Header="Play from url" Click="PlayFromUrl"/>
-				        <Separator/>
-				        <MenuItem Header="Exit"/>
-			        </MenuItem>
-			        <MenuItem Header="Настройки">
-				        <MenuItem Header="None"/>
-			        </MenuItem>
-			        <MenuItem Header="Избранное">
-				        <MenuItem Header="None"/>
-			        </MenuItem>
-			        <MenuItem Header="Станции">
-				        <MenuItem Header="None"/>
-			        </MenuItem>
-			        <MenuItem Header="Запись">
-				        <MenuItem Header="None"/>
-			        </MenuItem>
-			        <MenuItem Header="Справка">
-				        <MenuItem Header="None"/>
-			        </MenuItem>
-		        </Menu>
-	        </DockPanel>
-		<Grid>
+		<Grid ShowGridLines="True">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition />
+				<ColumnDefinition />
+				<ColumnDefinition />
+			</Grid.ColumnDefinitions>
 			<Grid.RowDefinitions>
-				<RowDefinition/>
-				<RowDefinition/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition />
+				<RowDefinition />
 			</Grid.RowDefinitions>
-
-			<StackPanel Grid.Row="0" >
-				
+			<Menu Grid.ColumnSpan="3" DockPanel.Dock="Top" Background="White" Padding="5">
+				<MenuItem Header="Файл">
+					<MenuItem Header="Play from url" Click="PlayFromUrl"/>
+					<MenuItem Header="Player" Click="MediaPlayerOpen"/>
+					<Separator/>
+					<MenuItem Header="Exit"/>
+				</MenuItem>
+				<MenuItem Header="Настройки">
+					<MenuItem Header="None"/>
+				</MenuItem>
+				<MenuItem Header="Избранное">
+					<MenuItem Header="None"/>
+				</MenuItem>
+				<MenuItem Header="Станции">
+					<MenuItem Header="None"/>
+				</MenuItem>
+				<MenuItem Header="Запись">
+					<MenuItem Header="None"/>
+				</MenuItem>
+				<MenuItem Header="Справка">
+					<MenuItem Header="None"/>
+				</MenuItem>
+			</Menu>
+			<StackPanel Grid.Column="0" Grid.Row="0">
+				<Button Content="Воспроизвести" 
+				        HorizontalAlignment="Center" Click="PlayComm" Width="150" Height="25"
+				        Margin="0,50,0,0"/>
+				<Button Content="Стоп" HorizontalAlignment="Center" 
+				        Click="StopRadio" Width="150" Height="25"
+				        Margin="0,20,0,0"/>
+				<Slider Orientation="Horizontal"  Width="150" Margin="0,20,0,10" 
+				        ValueChanged="RangeBase_OnValueChanged" Name="SliderVal"/>
 			</StackPanel>
-
-			<StackPanel Grid.Row="1" Background="White" >
-				<Grid Margin="0,20,0,0">
-					<Grid.ColumnDefinitions>
-						<ColumnDefinition/>
-						<ColumnDefinition/>
-						<ColumnDefinition/>
-					</Grid.ColumnDefinitions>
-					<Grid.RowDefinitions>
-						<RowDefinition Height="200"/>
-					</Grid.RowDefinitions>
-
-					<Slider Orientation="Horizontal" Grid.Column="0" Width="150" Margin="10" 
-					        ValueChanged="RangeBase_OnValueChanged" Name="SliderVal"/>
-					<TextBlock Grid.Column="0" Margin="0,170,0,0"/>
-
-					<TextBlock Grid.Column="0" Name="TextBlockPlaying" Margin="15"/>
-					<Button Grid.Column="1" Margin="0,0,0,0" Content="Воспроизвести" 
-					        HorizontalAlignment="Center" Click="PlayComm" Width="150" Height="25"/>
-					<Button Grid.Column="1" Margin="0,80,0,0" Content="Стоп" HorizontalAlignment="Center" 
-					        Click="StopRadio" Width="150" Height="25"/>
-					<Button Grid.Column="2" Height="25" Width="25" Content="Player" Click="MediaPlayerOpen"/>
-				</Grid>
-			</StackPanel>		
-		</Grid>	
-		<Line Height="5"/>
-		<ListBox Background="WhiteSmoke" ScrollViewer.VerticalScrollBarVisibility="Auto" 
-		         Name="RadioList">
-			<ListBox.ContextMenu>
-				<ContextMenu>
-					<MenuItem Header="Воспроизвести" Click="PlayFromContext"></MenuItem>
-					<MenuItem Header="Изменить"></MenuItem>
-					<MenuItem Header="Удалить" Click="DeleteFromContext"></MenuItem>
-				</ContextMenu>
-			</ListBox.ContextMenu>
-		</ListBox>
-	</StackPanel>
+            		
+			<ListBox Grid.Row="1" Grid.ColumnSpan="3" Background="WhiteSmoke" 
+			         ScrollViewer.VerticalScrollBarVisibility="Auto" 
+			         Name="RadioList">
+				<ListBox.ContextMenu>
+					<ContextMenu>
+						<MenuItem Header="Воспроизвести" Click="PlayFromContext"></MenuItem>
+						<MenuItem Header="Изменить"></MenuItem>
+						<MenuItem Header="Удалить" Click="DeleteFromContext"></MenuItem>
+					</ContextMenu>
+				</ListBox.ContextMenu>
+			</ListBox>
+			<TextBlock Grid.Column="0" Grid.Row="2" 
+			           Name="TextBlockVolume" Background="Chocolate" Margin="0,20,0,0" 
+			           VerticalAlignment="Bottom"/>
+			<TextBlock Grid.Column="0" Grid.Row="2" 
+			           Name="TextBlockPlaying" Margin="50,0,0,0" Background="Yellow" 
+			           VerticalAlignment="Bottom"/>
+		</Grid>
 </Window>

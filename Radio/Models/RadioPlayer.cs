@@ -85,8 +85,20 @@ namespace Radio.Models
         public static int GetTimeOfStream(int stream)
         {
             long TimeBytes = Bass.BASS_ChannelGetLength(stream);
-            double Time = Bass.BASS_ChannelSeconds2Bytes(stream, TimeBytes);
+            double Time = Bass.BASS_ChannelBytes2Seconds(stream, TimeBytes);
             return (int)Time;
+        }
+
+        public static int GetPosOfStream(int stream)
+        {
+            long pos = Bass.BASS_ChannelGetPosition(stream);
+            int posSec = (int) Bass.BASS_ChannelBytes2Seconds(stream, pos);
+            return posSec;
+        }
+        
+        public static void SetPosOfScroll(int stream, int pos)
+        {
+            Bass.BASS_ChannelSetPosition(stream, (double) pos);
         }
 
         /// <summary>

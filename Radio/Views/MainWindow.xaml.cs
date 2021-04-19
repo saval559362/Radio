@@ -51,10 +51,10 @@ namespace Radio.Views
 
         private void RangeBase_OnValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            TextBlockPlaying.Opacity = 1;
+            TextBlockVolume.Opacity = 1;
             //TextBlockPlaying.Text = SliderVal.Value.ToString();
             int vol = Convert.ToInt32(SliderVal.Value * 10);
-            TextBlockPlaying.Text = vol.ToString();
+            TextBlockVolume.Text = vol.ToString();
             RadioPlayer.SetVolumeToStream(RadioPlayer.Stream, vol);
         }
 

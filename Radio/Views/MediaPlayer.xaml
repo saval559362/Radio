@@ -27,8 +27,8 @@
                 <ListView.View>
                     <GridView>
                         <GridView.Columns>
-                            <GridViewColumn Header="Трек" Width="100" DisplayMemberBinding="{Binding Path=Name}"></GridViewColumn>
-                            <GridViewColumn Header="Время" Width="80" DisplayMemberBinding="{Binding Path= MPtime}"></GridViewColumn>
+                            <GridViewColumn Header="Трек" Width="100" x:Name="TrackName"></GridViewColumn>
+                            <GridViewColumn Header="Время" Width="80" x:Name="TrackTime"></GridViewColumn>
                         </GridView.Columns>
                     </GridView>
                 </ListView.View>
@@ -59,10 +59,10 @@
             </ListBox>-->
         </StackPanel>
         <StackPanel Background="WhiteSmoke">
-            <TextBlock x:Name="m_TextBlock" Foreground="White" FontSize="38" Height="40"></TextBlock>
+            <TextBlock Name="PosOfMusic" />
+            <TextBlock Name="TimeOfMusic" />
             <Slider x:Name="m_Slider" Margin="10, 10, 10,0" ToolTip="Слайдер" IsManipulationEnabled="True" 
                     IsEnabled="True" IsMoveToPointEnabled="True" AllowDrop="True"  />
-            <Track />
             <Slider x:Name="m_Volume" Margin="10, 5, 10, 0" ToolTip="Громкость" 
                     ValueChanged="M_Volume_OnValueChanged" Width="150"></Slider>
             <StackPanel Height="60" Orientation="Horizontal">

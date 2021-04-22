@@ -116,5 +116,14 @@ namespace Radio.Models
         {
             Bass.BASS_ChannelPause(-1);
         }
+        
+        public static Single[] fft=null;
+        public static void GetChannelInfo(int stream)
+        {
+            fft = new Single[256];//выделяем массив для данных            
+            Bass.BASS_ChannelGetData(stream, fft, (int)BASSData.BASS_DATA_FFT256);//получаем спектр потока
+            fft[0] = 0.0f;//избавляемся от постоянной составляющей
+        }
+        
     }
 }

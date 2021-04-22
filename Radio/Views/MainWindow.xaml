@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Radio"
+        xmlns:threading="clr-namespace:System.Threading;assembly=mscorlib"
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="800">
 		<Grid ShowGridLines="True">
@@ -68,5 +69,22 @@
 			<TextBlock Grid.Column="0" Grid.Row="2" 
 			           Name="TextBlockPlaying" Margin="50,0,0,0" Background="Yellow" 
 			           VerticalAlignment="Bottom"/>
+			
+			<Button Grid.Row="0" Grid.Column="2" Click="GetInfoClick"/>
+			
+			
+			<Canvas Grid.Row="2" Grid.Column="2" Name="LinesCanvas">
+				<Line Grid.Row="2" Grid.Column="1" Name="RedLine" Stroke="Red" />
+				<Line Grid.Row="2" Grid.Column="1" Name="RedLine2" Stroke="Red" />
+				<Line Grid.Row="2" Grid.Column="1" Name="RedLine3" Stroke="Red" />
+				<Line Grid.Row="2" Grid.Column="1" Name="RedLine4" Stroke="Red" />
+				<Line Grid.Row="2" Grid.Column="1" Name="RedLine5" Stroke="Red" />
+				<Line Grid.Row="2" Grid.Column="1" Name="RedLine6" Stroke="Red" />
+				<Line Grid.Row="2" Grid.Column="1" Name="RedLine7" Stroke="Red" />
+				<Line Grid.Row="2" Grid.Column="1" Name="RedLine8" Stroke="Red" />
+				<Line Grid.Row="2" Grid.Column="1" Name="RedLine9" Stroke="Red" />
+				<Line Grid.Row="2" Grid.Column="1" Name="RedLine10" Stroke="Red" />
+				<Line Grid.Row="1" Grid.Column="1" Name="BlueLine" Stroke="Blue" />
+			</Canvas>
 		</Grid>
 </Window>

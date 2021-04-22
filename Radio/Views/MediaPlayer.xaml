@@ -70,7 +70,7 @@
                 </Button>
                 <Button Height="20" Width="20" Background="LightGray" ToolTip="Воспроизводить" Content="P" Click="PlayClick">
                 </Button>
-                <Button Height="20" Width="20" Background="LightGray" ToolTip="Приостановить" Content="S" Click="Suspend">
+                <Button Height="20" Width="20" Background="LightGray" ToolTip="Приостановить" Content="S" >
                 </Button>
                 <Button Height="20" Width="20" Background="LightGray" ToolTip="Остановить" Click="PlayerStop">
                 </Button>

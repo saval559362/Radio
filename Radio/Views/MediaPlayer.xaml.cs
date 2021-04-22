@@ -2,6 +2,7 @@
 using System.Threading;
 using System.Windows;
 using Radio.Models;
+using Un4seen.Bass;
 
 namespace Radio.Views
 {
@@ -47,11 +48,8 @@ namespace Radio.Views
 
             m_listBox.Items.Add(_path);
         }
-
-        private void Suspend(object sender, RoutedEventArgs e)
-        {
-            RadioPlayer.SuspendChannel();
-        }
+        
+        
         
     }
 }

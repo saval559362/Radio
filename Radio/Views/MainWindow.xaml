@@ -7,7 +7,7 @@
         xmlns:threading="clr-namespace:System.Threading;assembly=mscorlib"
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="800">
-		<Grid ShowGridLines="True">
+		<Grid ShowGridLines="True" Name="MyGrid">
 			<Grid.ColumnDefinitions>
 				<ColumnDefinition />
 				<ColumnDefinition />
@@ -74,7 +74,7 @@
 			
 			
 			<Canvas Grid.Row="2" Grid.Column="2" Name="LinesCanvas">
-				<Line Grid.Row="2" Grid.Column="1" Name="RedLine" Stroke="Red" />
+				<!--<Line Grid.Row="2" Grid.Column="1" Name="RedLine" Stroke="Red" />
 				<Line Grid.Row="2" Grid.Column="1" Name="RedLine2" Stroke="Red" />
 				<Line Grid.Row="2" Grid.Column="1" Name="RedLine3" Stroke="Red" />
 				<Line Grid.Row="2" Grid.Column="1" Name="RedLine4" Stroke="Red" />
@@ -84,7 +84,7 @@
 				<Line Grid.Row="2" Grid.Column="1" Name="RedLine8" Stroke="Red" />
 				<Line Grid.Row="2" Grid.Column="1" Name="RedLine9" Stroke="Red" />
 				<Line Grid.Row="2" Grid.Column="1" Name="RedLine10" Stroke="Red" />
-				<Line Grid.Row="1" Grid.Column="1" Name="BlueLine" Stroke="Blue" />
+				<Line Grid.Row="1" Grid.Column="1" Name="BlueLine" Stroke="Blue" />-->
 			</Canvas>
 		</Grid>
 </Window>

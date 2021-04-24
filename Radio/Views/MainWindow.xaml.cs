@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.ObjectModel;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
@@ -15,6 +16,8 @@ namespace Radio.Views
     /// </summary>
     public partial class MainWindow
     {
+        ObservableCollection<Line> lines = new ObservableCollection<Line>();
+        
         DispatcherTimer timer = new DispatcherTimer();
         public MainWindow()
         {
@@ -23,7 +26,9 @@ namespace Radio.Views
             TextBlockPlaying.Opacity = 0;
             
             timer.Tick += new EventHandler(UpdateTimer_Tick);
-            timer.Interval = new TimeSpan(0, 0, 0, 0, 50);
+            timer.Interval = new TimeSpan(0, 0, 0, 0, 20);
+            
+            CreateLines();
         }
 
         private void UpdateTimer_Tick(object sender, EventArgs e)
@@ -31,10 +36,21 @@ namespace Radio.Views
             DrawLines();
         }
 
+        /// <summary>
+        /// Playing from button         
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void PlayComm(object sender, RoutedEventArgs e)
         {
             RadioPlayer.Play("http://87.252.227.241:8888/energyfm", 50);
         }
+        
+        /// <summary>
+        /// Playing from ListBox
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void PlayFromContext(object sender, RoutedEventArgs e)
         {
             RadioPlayer.Play(StationsStorage.urlRadios[RadioList.SelectedIndex].url, 50);
@@ -42,28 +58,52 @@ namespace Radio.Views
             TextBlockPlaying.Opacity = 1;
         }
 
+        /// <summary>
+        /// Deleting from ListBox
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void DeleteFromContext(object sender, RoutedEventArgs e)
         {
             StationsStorage.urlRadios.RemoveAt(RadioList.SelectedIndex);
         }
 
+        /// <summary>
+        /// Stopping stream
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void StopRadio(object sender, RoutedEventArgs e)
         {
             RadioPlayer.Stop();
             TextBlockPlaying.Opacity = 0;
         }
 
+        /// <summary>
+        /// Adding new radio url
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void PlayFromUrl(object sender, RoutedEventArgs e)
         {
             InputUrl inp = new InputUrl();
             inp.Show();
         }
 
+        /// <summary>
+        /// Showing playing radio name
+        /// </summary>
+        /// <param name="name"></param>
         public void SetNameRadio(string name)
         {
             TextBlockPlaying.Text = "Сейчас играет: " + name;
         }
 
+        /// <summary>
+        /// Change volume of stream
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void RangeBase_OnValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             TextBlockVolume.Opacity = 1;
@@ -73,6 +113,11 @@ namespace Radio.Views
             RadioPlayer.SetVolumeToStream(RadioPlayer.Stream, vol);
         }
 
+        /// <summary>
+        /// Open media pleer
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void MediaPlayerOpen(object sender, RoutedEventArgs e)
         {
             MediaPlayer player = new MediaPlayer();
@@ -81,79 +126,53 @@ namespace Radio.Views
             player.Show();
         }
 
+        /// <summary>
+        /// Getting channel information
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void GetInfoClick(object sender, RoutedEventArgs e)
         {
             timer.Start();
         }
 
-        private int start = 50;
-        public void DrawLines()
+        private int start = 20;
+
+        /// <summary>
+        /// Create lines and insert it in ObservableCollection
+        /// </summary>
+        public void CreateLines()
         {
-            RadioPlayer.GetChannelInfo(RadioPlayer.Stream);
-            
-            for (int i = 0; i < 15; i++)
+            for (int i = 0; i < 100; i++)
             {
-                
                 Line line = new Line();
                 line.X1 = start;
                 line.X2 = start;
                 line.Y1 = 0;
-                line.Y2 = RadioPlayer.fft[(i+1) * 2] * 1000;
+                line.Y2 = 0;
                 line.Stroke = Brushes.Red;
-                LinesCanvas.Children.Add(line);
-                this.AddChild(LinesCanvas);
-                start += 20;
+                line.StrokeThickness = 2;
+                lines.Add(line);
+                start += 3;
             }
             
-            /*RedLine.X1 = 70;
-            RedLine.X2 = 70;
-            RedLine.Y1 = 0;
-            RedLine.Y2 = RadioPlayer.fft[2] * 1000;
-            
-            RedLine2.X1 = 80;
-            RedLine2.X2 = 80;
-            RedLine2.Y1 = 0;
-            RedLine2.Y2 = RadioPlayer.fft[4] * 1000;
-            
-            RedLine3.X1 = 90;
-            RedLine3.X2 = 90;
-            RedLine3.Y1 = 0;
-            RedLine3.Y2 = RadioPlayer.fft[6] * 1000;
-            
-            RedLine4.X1 = 100;
-            RedLine4.X2 = 100;
-            RedLine4.Y1 = 0;
-            RedLine4.Y2 = RadioPlayer.fft[8] * 1000;
-            
-            RedLine5.X1 = 110;
-            RedLine5.X2 = 110;
-            RedLine5.Y1 = 0;
-            RedLine5.Y2 = RadioPlayer.fft[10] * 1000;
-            
-            RedLine6.X1 = 120;
-            RedLine6.X2 = 120;
-            RedLine6.Y1 = 0;
-            RedLine6.Y2 = RadioPlayer.fft[12] * 1000;
-            
-            RedLine7.X1 = 130;
-            RedLine7.X2 = 130;
-            RedLine7.Y1 = 0;
-            RedLine7.Y2 = RadioPlayer.fft[14] * 1000;
-            
-            RedLine8.X1 = 140;
-            RedLine8.X2 = 140;
-            RedLine8.Y1 = 0;
-            RedLine8.Y2 = RadioPlayer.fft[16] * 1000;
-            
-            RedLine9.X1 = 150;
-            RedLine9.X2 = 150;
-            RedLine9.Y1 = 0;
-            RedLine9.Y2 = RadioPlayer.fft[18] * 1000;
-            
-            RedLine10.X1 = 160;
-            RedLine10.X2 = 160;
-            RedLine10.Y1 = 0;
-            RedLine10.Y2 = RadioPlayer.fft[20] * 1000;*/
+            for (int i = 0; i < lines.Count; i++)
+            {
+                LinesCanvas.Children.Add(lines[i]);
+            }
+        }
+        
+        /// <summary>
+        /// Draw lines in visualizator
+        /// </summary>
+        public void DrawLines()
+        {
+            RadioPlayer.GetChannelInfo(RadioPlayer.Stream);
+
+            for (int i = 0; i < lines.Count; i++)
+            {
+                lines[i].Y2 = RadioPlayer.fft[i + 1] * 1000;
+            }
         }
         
     }

@@ -6,12 +6,24 @@
         xmlns:local="clr-namespace:Radio.Views"
         mc:Ignorable="d"
         Title="InputUrl" Height="300" Width="500">
-    <Grid>
-        <TextBox Name="RadioUrl" VerticalAlignment="Top" HorizontalAlignment="Center" Height="25" Width="250" 
-                 Margin="0,50,0,0"/>
-        <Button VerticalAlignment="Center" HorizontalAlignment="Center" Height="25" Width="40" Content="Ок" 
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        
+        <Label Grid.Row="0" Content="Url адресс" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="0" Name="RadioUrl" VerticalAlignment="Top" HorizontalAlignment="Center" Height="25" Width="250" 
+                 VerticalContentAlignment="Center" Margin="0,15,0,0"/>
+        
+        <Label Grid.Row="1" Content="Имя" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="1" Name="RadioName" VerticalAlignment="Top" HorizontalAlignment="Center" Height="25" Width="250" 
+                 VerticalContentAlignment="Center" Margin="0,15,0,0"/>
+        
+        <Button Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Height="25" Width="40" Content="Ок" 
                 Click="ClickOk"/>
-        <Button VerticalAlignment="Center" HorizontalAlignment="Center" Height="25" Width="150" 
+        <Button Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Height="25" Width="150" 
                 Content="Добавить в избранное" Margin="0,80,0,0" Click="AddFavourite"/>
     </Grid>
 </Window>

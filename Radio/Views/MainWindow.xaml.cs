@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
@@ -19,11 +21,16 @@ namespace Radio.Views
         ObservableCollection<Line> lines = new ObservableCollection<Line>();
         
         DispatcherTimer timer = new DispatcherTimer();
+
+        public int needUrlIndex;
         public MainWindow()
         {
             InitializeComponent();
-            RadioList.ItemsSource = StationsStorage.urlRadios;
+            /*RadioList.ItemsSource = null;
+            RadioList.ItemsSource = StationsStorage.LoadStations();*/
             TextBlockPlaying.Opacity = 0;
+            SliderVal.Maximum = 100;
+            SliderVal.Value = 25;
             
             timer.Tick += new EventHandler(UpdateTimer_Tick);
             timer.Interval = new TimeSpan(0, 0, 0, 0, 20);
@@ -37,25 +44,27 @@ namespace Radio.Views
         }
 
         /// <summary>
-        /// Playing from button         
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        public void PlayComm(object sender, RoutedEventArgs e)
-        {
-            RadioPlayer.Play("http://87.252.227.241:8888/energyfm", 50);
-        }
-        
-        /// <summary>
         /// Playing from ListBox
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        public void PlayFromContext(object sender, RoutedEventArgs e)
+        /*public void PlayFromContext(object sender, RoutedEventArgs e)
         {
+            timer.Stop();
             RadioPlayer.Play(StationsStorage.urlRadios[RadioList.SelectedIndex].url, 50);
             SetNameRadio(StationsStorage.urlRadios[RadioList.SelectedIndex].name);
             TextBlockPlaying.Opacity = 1;
+            timer.Start();
+        }*/
+
+        public void PlayComm(object sender, RoutedEventArgs e)
+        {
+            timer.Stop();
+            RadioPlayer.Play(StationsStorage.urlRadios[needUrlIndex].url, 50);
+            SetNameRadio(StationsStorage.urlRadios[needUrlIndex].name);
+            TextBlockPlaying.Opacity = 1;
+            timer.Start();
+            SelectedName.Text = "";
         }
 
         /// <summary>
@@ -108,7 +117,7 @@ namespace Radio.Views
         {
             TextBlockVolume.Opacity = 1;
             //TextBlockPlaying.Text = SliderVal.Value.ToString();
-            int vol = Convert.ToInt32(SliderVal.Value * 10);
+            int vol = Convert.ToInt32(SliderVal.Value);
             TextBlockVolume.Text = vol.ToString();
             RadioPlayer.SetVolumeToStream(RadioPlayer.Stream, vol);
         }
@@ -126,34 +135,26 @@ namespace Radio.Views
             player.Show();
         }
 
-        /// <summary>
-        /// Getting channel information
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        public void GetInfoClick(object sender, RoutedEventArgs e)
-        {
-            timer.Start();
-        }
-
-        private int start = 20;
+        private double start = 0;
 
         /// <summary>
         /// Create lines and insert it in ObservableCollection
         /// </summary>
         public void CreateLines()
         {
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < 50; i++)
             {
                 Line line = new Line();
                 line.X1 = start;
                 line.X2 = start;
                 line.Y1 = 0;
                 line.Y2 = 0;
-                line.Stroke = Brushes.Red;
-                line.StrokeThickness = 2;
+                line.Stroke = Brushes.Coral;
+                line.StrokeThickness = 5;
+                line.VerticalAlignment = VerticalAlignment.Bottom;
+                
                 lines.Add(line);
-                start += 3;
+                start += 5.5;
             }
             
             for (int i = 0; i < lines.Count; i++)
@@ -171,8 +172,15 @@ namespace Radio.Views
 
             for (int i = 0; i < lines.Count; i++)
             {
-                lines[i].Y2 = RadioPlayer.fft[i + 1] * 1000;
+                lines[i].Y2 = RadioPlayer.fft[i] * 200;
             }
+        }
+
+        public void FavouriteSelect_Click(object sender, RoutedEventArgs e)
+        {
+            FavouriteSelect fav = new FavouriteSelect();
+            fav.Show();
+
         }
         
     }

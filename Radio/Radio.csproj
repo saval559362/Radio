@@ -58,6 +58,10 @@
             <DependentUpon>App.xaml</DependentUpon>
             <SubType>Code</SubType>
         </Compile>
+        <Compile Include="Models\AppControl.cs" />
+        <Compile Include="Views\FavouriteSelect.xaml.cs">
+          <DependentUpon>FavouriteSelect.xaml</DependentUpon>
+        </Compile>
         <Compile Include="Views\InputUrl.xaml.cs">
           <DependentUpon>InputUrl.xaml</DependentUpon>
         </Compile>
@@ -90,6 +94,7 @@
         <None Include="App.config" />
     </ItemGroup>
     <ItemGroup>
+      <Page Include="Views\FavouriteSelect.xaml" />
       <Page Include="Views\InputUrl.xaml" />
       <Page Include="Views\MainWindow.xaml">
         <Generator>MSBuild:Compile</Generator>

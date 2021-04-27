@@ -12,6 +12,7 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Lib" t="Include" />
         <e p="Models" t="Include">
+          <e p="AppControl.cs" t="Include" />
           <e p="RadioPlayer.cs" t="Include" />
           <e p="Stations.cs" t="Include" />
           <e p="StationsStorage.cs" t="Include" />
@@ -20,6 +21,7 @@
           <e p="Debug" t="Include">
             <e p="App.g.cs" t="Include" />
             <e p="Views" t="Include">
+              <e p="FavouriteSelect.g.cs" t="Include" />
               <e p="InputUrl.g.cs" t="Include" />
               <e p="MainWindow.g.cs" t="Include" />
               <e p="MediaPlayer.g.cs" t="Include" />
@@ -33,6 +35,8 @@
         </e>
         <e p="Radio.csproj" t="IncludeRecursive" />
         <e p="Views" t="Include">
+          <e p="FavouriteSelect.xaml" t="Include" />
+          <e p="FavouriteSelect.xaml.cs" t="Include" />
           <e p="InputUrl.xaml" t="Include" />
           <e p="InputUrl.xaml.cs" t="Include" />
           <e p="MainWindow.xaml" t="Include" />

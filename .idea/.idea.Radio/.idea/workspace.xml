@@ -5,17 +5,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a3415cd1-2b64-4c5c-ba50-ac82cd4f2b7b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Radio/Models/AppControl.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Radio/Views/FavouriteSelect.xaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Radio/Views/FavouriteSelect.xaml.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Radio/obj/Debug/Views/FavouriteSelect.baml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Radio/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Radio/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Radio/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Radio/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Radio/Models/StationsStorage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Radio/Models/StationsStorage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Radio/Radio.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Radio/Radio.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Radio/Views/InputUrl.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Radio/Views/InputUrl.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Radio/Views/InputUrl.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Radio/Views/InputUrl.xaml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Radio/Views/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Radio/Views/MainWindow.xaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Radio/Views/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Radio/Views/MainWindow.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Radio/Views/MediaPlayer.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Radio/Views/MediaPlayer.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Radio/Views/MediaPlayer.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Radio/Views/MediaPlayer.xaml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Radio/bin/Debug/Radio.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Radio/bin/Debug/Radio.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Radio/bin/Debug/Radio.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Radio/bin/Debug/Radio.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Radio/obj/Debug/Radio.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Radio/obj/Debug/Radio.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Radio/obj/Debug/Radio.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Radio/obj/Debug/Radio.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Radio/obj/Debug/Radio.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Radio/obj/Debug/Radio.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Radio/obj/Debug/Radio.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Radio/obj/Debug/Radio.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Radio/obj/Debug/Radio.g.resources" beforeDir="false" afterPath="$PROJECT_DIR$/Radio/obj/Debug/Radio.g.resources" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Radio/obj/Debug/Radio.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Radio/obj/Debug/Radio.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Radio/obj/Debug/Radio_MarkupCompile.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Radio/obj/Debug/Radio_MarkupCompile.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Radio/obj/Debug/Radio_MarkupCompile.lref" beforeDir="false" afterPath="$PROJECT_DIR$/Radio/obj/Debug/Radio_MarkupCompile.lref" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Radio/obj/Debug/Views/InputUrl.baml" beforeDir="false" afterPath="$PROJECT_DIR$/Radio/obj/Debug/Views/InputUrl.baml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Radio/obj/Debug/Views/InputUrl.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Radio/obj/Debug/Views/InputUrl.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Radio/obj/Debug/Views/InputUrl.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Radio/obj/Debug/Views/InputUrl.g.i.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Radio/obj/Debug/Views/MainWindow.baml" beforeDir="false" afterPath="$PROJECT_DIR$/Radio/obj/Debug/Views/MainWindow.baml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Radio/obj/Debug/Views/MainWindow.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Radio/obj/Debug/Views/MainWindow.g.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Radio/obj/Debug/Views/MainWindow.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Radio/obj/Debug/Views/MainWindow.g.i.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Radio/obj/Debug/Views/MediaPlayer.baml" beforeDir="false" afterPath="$PROJECT_DIR$/Radio/obj/Debug/Views/MediaPlayer.baml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Radio/obj/Debug/Views/MediaPlayer.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Radio/obj/Debug/Views/MediaPlayer.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Radio/obj/Debug/Views/MediaPlayer.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Radio/obj/Debug/Views/MediaPlayer.g.i.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +52,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5F37459E-F130-4442-BA19-EE268C49D074/57/257405cf/Collection`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0C285EE5-6767-4513-BB6D-88C242FEC00E/9c/82e83409/ContentControl.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5F37459E-F130-4442-BA19-EE268C49D074/4f/d1390116/TimeSpan.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5F37459E-F130-4442-BA19-EE268C49D074/f9/65e29d37/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6535C333-BC35-425E-B420-D6A3AF5DD0D6/6f/ee7d7f7e/Bass.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0C285EE5-6767-4513-BB6D-88C242FEC00E/2c/9f37b0b2/XamlReader.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0C285EE5-6767-4513-BB6D-88C242FEC00E/d5/6288b1a8/ResourcePart.cs" root0="SKIP_HIGHLIGHTING" />
@@ -39,16 +62,19 @@
     <changedPaths>
       <option value="$PROJECT_DIR$/Radio/MainWindow.xaml" />
       <option value="$PROJECT_DIR$/Radio/Models/Stations.cs" />
-      <option value="$PROJECT_DIR$/Radio/Models/StationsStorage.cs" />
       <option value="$PROJECT_DIR$/Radio/App.xaml" />
       <option value="$PROJECT_DIR$/Radio/Radio.csproj" />
+      <option value="$PROJECT_DIR$/Radio/Models/StationsStorage.cs" />
+      <option value="$PROJECT_DIR$/Radio/Views/MediaPlayer.xaml" />
+      <option value="$PROJECT_DIR$/Radio/Models/RadioPlayer.cs" />
+      <option value="$PROJECT_DIR$/Radio/Views/MediaPlayer.xaml.cs" />
       <option value="$PROJECT_DIR$/Radio/Views/InputUrl.xaml" />
       <option value="$PROJECT_DIR$/Radio/Views/InputUrl.xaml.cs" />
-      <option value="$PROJECT_DIR$/Radio/Views/MediaPlayer.xaml" />
-      <option value="$PROJECT_DIR$/Radio/Views/MediaPlayer.xaml.cs" />
-      <option value="$PROJECT_DIR$/Radio/Models/RadioPlayer.cs" />
+      <option value="$PROJECT_DIR$/Radio/Models/AppControl.cs" />
+      <option value="$PROJECT_DIR$/Radio/Views/FavouriteSelect.xaml" />
       <option value="$PROJECT_DIR$/Radio/Views/MainWindow.xaml" />
       <option value="$PROJECT_DIR$/Radio/Views/MainWindow.xaml.cs" />
+      <option value="$PROJECT_DIR$/Radio/Views/FavouriteSelect.xaml.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1r17tyZfIG5gCcniTUQgUPCLThR" />
@@ -124,7 +150,15 @@
       <workItem from="1619108605179" duration="5861000" />
       <workItem from="1619162522683" duration="80000" />
       <workItem from="1619165365225" duration="486000" />
-      <workItem from="1619241475634" duration="2698000" />
+      <workItem from="1619241475634" duration="2816000" />
+      <workItem from="1619254179048" duration="5638000" />
+      <workItem from="1619272145655" duration="1053000" />
+      <workItem from="1619330958932" duration="4185000" />
+      <workItem from="1619424475278" duration="661000" />
+      <workItem from="1619427884480" duration="800000" />
+      <workItem from="1619459052401" duration="1857000" />
+      <workItem from="1619511245692" duration="2005000" />
+      <workItem from="1619537105892" duration="3275000" />
     </task>
     <task id="LOCAL-00001" summary="Added simple mediaPlayer">
       <created>1618143282973</created>
@@ -161,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619115060010</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Improved implementation and drawing of lines">
+      <created>1619244294012</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1619244294012</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,6 +233,7 @@
     <MESSAGE value="Improved media player" />
     <MESSAGE value="Configured styles" />
     <MESSAGE value="Added primitive audio visualizer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added primitive audio visualizer" />
+    <MESSAGE value="Improved implementation and drawing of lines" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improved implementation and drawing of lines" />
   </component>
 </project>

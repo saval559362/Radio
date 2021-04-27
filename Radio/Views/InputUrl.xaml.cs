@@ -12,7 +12,7 @@ namespace Radio.Views
 
         public void AddFavourite(object sender, RoutedEventArgs e)
         {
-            StationsStorage.urlRadios.Add(new Stations { name = "none", url = $"{RadioUrl.Text}" });
+            StationsStorage.WriteStation(RadioName.Text, RadioUrl.Text);
         }
 
         public void ClickOk(object sender, RoutedEventArgs e)

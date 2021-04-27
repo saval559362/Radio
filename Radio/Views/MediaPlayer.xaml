@@ -5,7 +5,8 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="clr-namespace:Radio.Views"
       mc:Ignorable="d"
-      Title="MediaPlayer" Height="450" Width="800">
+      Title="MediaPlayer" Height="450" Width="800"
+      Closing="Window_Closing">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="0.5*"></RowDefinition>
@@ -62,7 +63,7 @@
             <TextBlock Name="PosOfMusic" />
             <TextBlock Name="TimeOfMusic" />
             <Slider x:Name="m_Slider" Margin="10, 10, 10,0" ToolTip="Слайдер" IsManipulationEnabled="True" 
-                    IsEnabled="True" IsMoveToPointEnabled="True" AllowDrop="True"  />
+                    IsEnabled="True" IsMoveToPointEnabled="True" AllowDrop="True" />
             <Slider x:Name="m_Volume" Margin="10, 5, 10, 0" ToolTip="Громкость" 
                     ValueChanged="M_Volume_OnValueChanged" Width="150"></Slider>
             <StackPanel Height="60" Orientation="Horizontal">

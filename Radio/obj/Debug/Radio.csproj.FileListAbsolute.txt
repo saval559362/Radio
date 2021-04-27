@@ -42,3 +42,5 @@ D:\Git\Radio\Radio\obj\Debug\Radio.csproj.CoreCompileInputs.cache
 D:\Git\Radio\Radio\obj\Debug\Radio.csproj.CopyComplete
 D:\Git\Radio\Radio\obj\Debug\Radio.exe
 D:\Git\Radio\Radio\obj\Debug\Radio.pdb
+D:\Git\Radio\Radio\obj\Debug\Views\FavouriteSelect.g.cs
+D:\Git\Radio\Radio\obj\Debug\Views\FavouriteSelect.baml

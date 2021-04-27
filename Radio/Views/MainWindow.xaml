@@ -7,7 +7,7 @@
         xmlns:threading="clr-namespace:System.Threading;assembly=mscorlib"
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="800">
-		<Grid ShowGridLines="True" Name="MyGrid">
+		<Grid Name="MyGrid"> <!--ShowGridLines="True"-->
 			<Grid.ColumnDefinitions>
 				<ColumnDefinition />
 				<ColumnDefinition />
@@ -29,7 +29,7 @@
 					<MenuItem Header="None"/>
 				</MenuItem>
 				<MenuItem Header="Избранное">
-					<MenuItem Header="None"/>
+					<MenuItem Header="Станции" Click="FavouriteSelect_Click"/>
 				</MenuItem>
 				<MenuItem Header="Станции">
 					<MenuItem Header="None"/>
@@ -46,34 +46,32 @@
 				        HorizontalAlignment="Center" Click="PlayComm" Width="150" Height="25"
 				        Margin="0,50,0,0"/>
 				<Button Content="Стоп" HorizontalAlignment="Center" 
-				        Click="StopRadio" Width="150" Height="25"
-				        Margin="0,20,0,0"/>
+				        Click="StopRadio" Width="50" Height="25"
+				        Margin="0,50,0,0"/>
 				<Slider Orientation="Horizontal"  Width="150" Margin="0,20,0,10" 
 				        ValueChanged="RangeBase_OnValueChanged" Name="SliderVal"/>
 			</StackPanel>
+			<TextBlock Grid.Column="1" Grid.Row="0" VerticalAlignment="Bottom" Name="SelectedName"/>
             		
 			<ListBox Grid.Row="1" Grid.ColumnSpan="3" Background="WhiteSmoke" 
 			         ScrollViewer.VerticalScrollBarVisibility="Auto" 
 			         Name="RadioList">
 				<ListBox.ContextMenu>
 					<ContextMenu>
-						<MenuItem Header="Воспроизвести" Click="PlayFromContext"></MenuItem>
+						<MenuItem Header="Воспроизвести" ></MenuItem>
 						<MenuItem Header="Изменить"></MenuItem>
 						<MenuItem Header="Удалить" Click="DeleteFromContext"></MenuItem>
 					</ContextMenu>
 				</ListBox.ContextMenu>
 			</ListBox>
 			<TextBlock Grid.Column="0" Grid.Row="2" 
-			           Name="TextBlockVolume" Background="Chocolate" Margin="0,20,0,0" 
+			           Name="TextBlockVolume"  Margin="0,20,0,0" 
 			           VerticalAlignment="Bottom"/>
 			<TextBlock Grid.Column="0" Grid.Row="2" 
-			           Name="TextBlockPlaying" Margin="50,0,0,0" Background="Yellow" 
+			           Name="TextBlockPlaying" Margin="50,0,0,0" 
 			           VerticalAlignment="Bottom"/>
 			
-			<Button Grid.Row="0" Grid.Column="2" Click="GetInfoClick"/>
-			
-			
-			<Canvas Grid.Row="2" Grid.Column="2" Name="LinesCanvas">
+			<Canvas Grid.Row="0" Grid.Column="2" Name="LinesCanvas">
 				<!--<Line Grid.Row="2" Grid.Column="1" Name="RedLine" Stroke="Red" />
 				<Line Grid.Row="2" Grid.Column="1" Name="RedLine2" Stroke="Red" />
 				<Line Grid.Row="2" Grid.Column="1" Name="RedLine3" Stroke="Red" />

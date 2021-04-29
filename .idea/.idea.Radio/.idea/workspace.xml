@@ -5,39 +5,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a3415cd1-2b64-4c5c-ba50-ac82cd4f2b7b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Radio/Models/AppControl.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Radio/Views/FavouriteSelect.xaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Radio/Views/FavouriteSelect.xaml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Radio/obj/Debug/Views/FavouriteSelect.baml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Radio/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Radio/.idea/contentModel.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Radio/obj/Debug/Views/FavouriteSelect.g.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Radio/obj/Debug/Views/FavouriteSelect.g.i.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Radio/obj/Release/.NETFramework,Version=v4.8.AssemblyAttributes.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Radio/obj/Release/App.g.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Radio/obj/Release/App.g.i.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Radio/obj/Release/Radio_MarkupCompile.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Radio/obj/Release/Radio_MarkupCompile.lref" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Radio/obj/Release/Views/FavouriteSelect.baml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Radio/obj/Release/Views/FavouriteSelect.g.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Radio/obj/Release/Views/FavouriteSelect.g.i.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Radio/obj/Release/Views/InputUrl.baml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Radio/obj/Release/Views/InputUrl.g.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Radio/obj/Release/Views/InputUrl.g.i.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Radio/obj/Release/Views/MainWindow.baml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Radio/obj/Release/Views/MainWindow.g.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Radio/obj/Release/Views/MainWindow.g.i.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Radio/obj/Release/Views/MediaPlayer.baml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Radio/obj/Release/Views/MediaPlayer.g.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Radio/obj/Release/Views/MediaPlayer.g.i.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Radio/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Radio/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Radio/Models/StationsStorage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Radio/Models/StationsStorage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Radio/Models/RadioPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Radio/Models/RadioPlayer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Radio/Radio.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Radio/Radio.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Radio/Views/InputUrl.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Radio/Views/InputUrl.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Radio/Views/InputUrl.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Radio/Views/InputUrl.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Radio/Views/FavouriteSelect.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Radio/Views/FavouriteSelect.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Radio/Views/FavouriteSelect.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Radio/Views/FavouriteSelect.xaml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Radio/Views/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Radio/Views/MainWindow.xaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Radio/Views/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Radio/Views/MainWindow.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Radio/Views/MediaPlayer.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Radio/Views/MediaPlayer.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Radio/Views/MediaPlayer.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Radio/Views/MediaPlayer.xaml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Radio/bin/Debug/Radio.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Radio/bin/Debug/Radio.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Radio/bin/Debug/Radio.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Radio/bin/Debug/Radio.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Radio/obj/Debug/Radio.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Radio/obj/Debug/Radio.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Radio/obj/Debug/Radio.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Radio/obj/Debug/Radio.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Radio/obj/Debug/Radio.csproj.GenerateResource.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Radio/obj/Debug/Radio.csproj.GenerateResource.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Radio/obj/Debug/Radio.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Radio/obj/Debug/Radio.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Radio/obj/Debug/Radio.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Radio/obj/Debug/Radio.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Radio/obj/Debug/Radio.g.resources" beforeDir="false" afterPath="$PROJECT_DIR$/Radio/obj/Debug/Radio.g.resources" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Radio/obj/Debug/Radio.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Radio/obj/Debug/Radio.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Radio/obj/Debug/Radio_MarkupCompile.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Radio/obj/Debug/Radio_MarkupCompile.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Radio/obj/Debug/Radio_MarkupCompile.lref" beforeDir="false" afterPath="$PROJECT_DIR$/Radio/obj/Debug/Radio_MarkupCompile.lref" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Radio/obj/Debug/Views/InputUrl.baml" beforeDir="false" afterPath="$PROJECT_DIR$/Radio/obj/Debug/Views/InputUrl.baml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Radio/obj/Debug/Views/InputUrl.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Radio/obj/Debug/Views/InputUrl.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Radio/obj/Debug/Views/InputUrl.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Radio/obj/Debug/Views/InputUrl.g.i.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Radio/obj/Debug/Views/FavouriteSelect.baml" beforeDir="false" afterPath="$PROJECT_DIR$/Radio/obj/Debug/Views/FavouriteSelect.baml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Radio/obj/Debug/Views/MainWindow.baml" beforeDir="false" afterPath="$PROJECT_DIR$/Radio/obj/Debug/Views/MainWindow.baml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Radio/obj/Debug/Views/MainWindow.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Radio/obj/Debug/Views/MainWindow.g.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Radio/obj/Debug/Views/MainWindow.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Radio/obj/Debug/Views/MainWindow.g.i.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Radio/obj/Debug/Views/MediaPlayer.baml" beforeDir="false" afterPath="$PROJECT_DIR$/Radio/obj/Debug/Views/MediaPlayer.baml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Radio/obj/Debug/Views/MediaPlayer.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Radio/obj/Debug/Views/MediaPlayer.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Radio/obj/Debug/Views/MediaPlayer.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Radio/obj/Debug/Views/MediaPlayer.g.i.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,15 +70,15 @@
       <option value="$PROJECT_DIR$/Radio/Radio.csproj" />
       <option value="$PROJECT_DIR$/Radio/Models/StationsStorage.cs" />
       <option value="$PROJECT_DIR$/Radio/Views/MediaPlayer.xaml" />
-      <option value="$PROJECT_DIR$/Radio/Models/RadioPlayer.cs" />
       <option value="$PROJECT_DIR$/Radio/Views/MediaPlayer.xaml.cs" />
       <option value="$PROJECT_DIR$/Radio/Views/InputUrl.xaml" />
       <option value="$PROJECT_DIR$/Radio/Views/InputUrl.xaml.cs" />
       <option value="$PROJECT_DIR$/Radio/Models/AppControl.cs" />
       <option value="$PROJECT_DIR$/Radio/Views/FavouriteSelect.xaml" />
+      <option value="$PROJECT_DIR$/Radio/Views/FavouriteSelect.xaml.cs" />
       <option value="$PROJECT_DIR$/Radio/Views/MainWindow.xaml" />
       <option value="$PROJECT_DIR$/Radio/Views/MainWindow.xaml.cs" />
-      <option value="$PROJECT_DIR$/Radio/Views/FavouriteSelect.xaml.cs" />
+      <option value="$PROJECT_DIR$/Radio/Models/RadioPlayer.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1r17tyZfIG5gCcniTUQgUPCLThR" />
@@ -159,6 +163,9 @@
       <workItem from="1619459052401" duration="1857000" />
       <workItem from="1619511245692" duration="2005000" />
       <workItem from="1619537105892" duration="3275000" />
+      <workItem from="1619629985689" duration="673000" />
+      <workItem from="1619676446535" duration="4363000" />
+      <workItem from="1619713186103" duration="3797000" />
     </task>
     <task id="LOCAL-00001" summary="Added simple mediaPlayer">
       <created>1618143282973</created>

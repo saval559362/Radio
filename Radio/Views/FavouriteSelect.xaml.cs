@@ -8,6 +8,7 @@ namespace Radio.Views
     {
         public FavouriteSelect()
         {
+            StationsStorage.urlRadios.Clear();
             InitializeComponent();
             UrlList.ItemsSource = StationsStorage.LoadStations();
         }

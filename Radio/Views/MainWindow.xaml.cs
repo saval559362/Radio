@@ -65,6 +65,8 @@ namespace Radio.Views
             TextBlockPlaying.Opacity = 1;
             timer.Start();
             SelectedName.Text = "";
+            RadioPlayer.GetTagsFromCurrentURLStream(RadioPlayer.Stream);
+            TextBlockTagTrack.Text = RadioPlayer.tag;
         }
 
         /// <summary>
@@ -142,13 +144,14 @@ namespace Radio.Views
         /// </summary>
         public void CreateLines()
         {
-            for (int i = 0; i < 50; i++)
+            for (int i = 0; i < 150; i++)
             {
                 Line line = new Line();
                 line.X1 = start;
                 line.X2 = start;
-                line.Y1 = 0;
-                line.Y2 = 0;
+                line.Y1 = 200;
+                line.Y2 = 200;
+                line.MinHeight = 150;
                 line.Stroke = Brushes.Coral;
                 line.StrokeThickness = 5;
                 line.VerticalAlignment = VerticalAlignment.Bottom;
@@ -172,8 +175,9 @@ namespace Radio.Views
 
             for (int i = 0; i < lines.Count; i++)
             {
-                lines[i].Y2 = RadioPlayer.fft[i] * 200;
+                lines[i].Y2 = 200 - (RadioPlayer.fft[i] * 300);
             }
+            
         }
 
         public void FavouriteSelect_Click(object sender, RoutedEventArgs e)

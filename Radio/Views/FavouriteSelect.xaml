@@ -11,7 +11,7 @@
             <RowDefinition Height="350"/>
             <RowDefinition />
         </Grid.RowDefinitions>
-        <ListBox Grid.Row="0" BorderBrush="Chartreuse" 
+        <ListBox Grid.Row="0" BorderBrush="DarkGray" 
                  ScrollViewer.VerticalScrollBarVisibility="Auto" 
                  Name="UrlList">
             <ListBox.ContextMenu>

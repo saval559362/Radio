@@ -70,8 +70,11 @@
 			<TextBlock Grid.Column="0" Grid.Row="2" 
 			           Name="TextBlockPlaying" Margin="50,0,0,0" 
 			           VerticalAlignment="Bottom"/>
+			<TextBlock Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2"
+			           Name="TextBlockTagTrack" Margin="150,0,0,0" 
+			           VerticalAlignment="Bottom" Background="Aqua"/>
 			
-			<Canvas Grid.Row="0" Grid.Column="2" Name="LinesCanvas">
+			<Canvas Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Name="LinesCanvas">
 				<!--<Line Grid.Row="2" Grid.Column="1" Name="RedLine" Stroke="Red" />
 				<Line Grid.Row="2" Grid.Column="1" Name="RedLine2" Stroke="Red" />
 				<Line Grid.Row="2" Grid.Column="1" Name="RedLine3" Stroke="Red" />
@@ -84,5 +87,6 @@
 				<Line Grid.Row="2" Grid.Column="1" Name="RedLine10" Stroke="Red" />
 				<Line Grid.Row="1" Grid.Column="1" Name="BlueLine" Stroke="Blue" />-->
 			</Canvas>
+			<!--<Line Grid.Row="0" Grid.Column="1" Stroke="Aquamarine" X1="0" X2="0" Y1="200" Y2="40" StrokeThickness="10"/>-->
 		</Grid>
 </Window>

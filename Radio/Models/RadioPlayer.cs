@@ -1,5 +1,7 @@
 ﻿using System;
 using Un4seen.Bass;
+using Un4seen.Bass.AddOn.Tags;
+
 namespace Radio.Models
 {
     public static class RadioPlayer
@@ -123,6 +125,16 @@ namespace Radio.Models
             fft = new Single[256];//выделяем массив для данных            
             Bass.BASS_ChannelGetData(stream, fft, (int)BASSData.BASS_DATA_FFT256);//получаем спектр потока
             fft[0] = 0.0f;//избавляемся от постоянной составляющей
+        }
+        public static TAG_INFO TagInfo { get; private set; }
+        public static string tag;
+        public static void GetTagsFromCurrentURLStream(int stream)
+        {
+            TAG_INFO tagInfo = new TAG_INFO();
+            IntPtr tagsIntPtr = Bass.BASS_ChannelGetTags(stream, BASSTag.BASS_TAG_META);
+            BassTags.BASS_TAG_GetFromURL(stream, tagInfo);
+
+            
         }
         
     }
